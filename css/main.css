@@ -1750,7 +1750,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-nav h3 {
     font-family: "montserrat-semibold", sans-serif;
-    font-size: 11px;
+    font-size: 1.3rem;
     line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: .25rem;
@@ -1883,6 +1883,24 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /* ------------------------------------------------------------------- 
  * ## mobile menu toggle 
  * ------------------------------------------------------------------- */
+.header-menu {
+    position: fixed;
+    right: 38px;
+    top: 24px;
+    height: 42px;
+    width: 112px;
+    line-height: 42px;
+    background-color: rgba(1, 2, 3, 0.1);
+    color: #FFFFFF;
+    border-radius: 16px 0 16px 16px;
+    border: solid #4db8ff;
+    border-width: 2px;
+}
+
+.header-menu:hover, .header-menu:focus {
+    background-color: rgba(1, 2, 3, 1);
+}
+
 .header-menu-toggle {
     position: fixed;
     right: 38px;
@@ -1897,14 +1915,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: #4db8ff;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-}
-
-.header-menu-toggle.opaque {
-    background-color: #000000;
-}
-
-.header-menu-toggle.opaque .header-menu-text {
-    background-color: #000000;
 }
 
 .header-menu-toggle:hover, .header-menu-toggle:focus {
@@ -1966,14 +1976,21 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     .header-logo {
         left: 30px;
     }
-    .header-menu-toggle {
+    .header-menu, .header-menu-toggle {
         right: 25px;
+    }
+    .header-menu {
+        background-color: rgba(1, 2, 3, 1);
     }
 }
 
 @media only screen and (max-width: 400px) {
     .header-menu-text {
         display: none;
+    }
+    .header-menu {
+        width: 43px;
+        background-color: rgba(1, 2, 3, 1);
     }
 }
 
@@ -2184,6 +2201,22 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     line-height: calc(33px - 4px);
     border: 2px solid #FFFFFF;
     border-radius: 50%;
+}
+
+.home-social i[class="fa fa-facebook"]:hover, .home-social i[class="fa fa-facebook"]:focus {
+    background-color: #4267B2;
+}
+
+.home-social i[class="fa fa-instagram"]:hover, .home-social i[class="fa fa-instagram"]:focus {
+    background-color: #bc2a8d;
+}
+
+.home-social i[class="fa fa-linkedin"]:hover, .home-social i[class="fa fa-linknedin"]:focus {
+    background-color: #2867B2;
+}
+
+.home-social i[class="fa fa-github"]:hover, .home-social i[class="fa fa-github"]:focus {
+    background-color: #6e5494;
 }
 
 .home-social span {
@@ -2411,6 +2444,13 @@ html.no-csstransitions .home-content__main {
         margin: 1.5rem 0 0 0;
     }
     .home-social {
+        display: none;
+    }
+    .home-content__scroll {
+        bottom: 10%;
+        left: 33.33%;
+    }
+    .home-content__line {
         display: none;
     }
 }
@@ -3378,9 +3418,20 @@ html.no-csstransitions .home-content__main {
     color: white;
 }
 
-.contact-social li a:hover, 
-.contact-social li a:focus {
-    color: #4db8ff;
+.contact-social li a i[class="fa fa-facebook"]:hover, .contact-social li a i[class="fa fa-facebook"]:focus {
+    color: #4267B2;
+}
+
+.contact-social li a i[class="fa fa-instagram"]:hover, .contact-social li a i[class="fa fa-instagram"]:focus {
+    color: #bc2a8d;
+}
+
+.contact-social li a i[class="fa fa-linkedin"]:hover, .contact-social li a i[class="fa fa-linkedin"]:focus {
+    color: #2867B2;
+}
+
+.contact-social li a i[class="fa fa-github"]:hover, .contact-social li a i[class="fa fa-github"]:focus {
+    color: #6e5494;
 }
 
 .contact-social li:last-child {
@@ -3646,8 +3697,7 @@ footer .row {
 }
 
 .footer-subscribe .cv-download a input[type=submit] {
-    top: 0;
-    right: 0;
+    width: 100%;
     color: #FFFFFF;
     background: #4db8ff;
     border-color: #4db8ff;
@@ -3659,9 +3709,9 @@ footer .row {
  * ## footer bottom
  * --------------------------------------------------------------- */
 .footer-bottom {
-    margin-top: 5.4rem;
+    margin-top: 3rem;
     text-align: center;
-    font-size: 14px;
+    font-size: 7px;
 }
 
 .footer-bottom .copyright span {
@@ -3699,7 +3749,7 @@ footer .row {
     width: 60px;
     line-height: 60px;
     text-align: center;
-    background: black;
+    background-color: rgba(1, 2, 3, 0.1);
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
     text-transform: uppercase;
@@ -3714,6 +3764,7 @@ footer .row {
 
 .go-top a:hover, .go-top a:focus {
     color: #FFFFFF;
+    background-color: rgba(1, 2, 3, 1);
 }
 
 

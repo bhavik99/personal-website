@@ -1457,7 +1457,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .display-1 {
     font-family: "montserrat-medium", sans-serif;
-    font-size: 7.8rem;
+    font-size: 7rem;
     line-height: 1.25;
     color: #000000;
     margin-top: 0;
@@ -1561,7 +1561,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .section-header.has-bottom-sep::before {
     content: "";
     display: inline-block;
-    height: 1px;
+    height: 2px;
     width: 550px;
     background-color: rgba(0, 0, 0, 0.1);
     position: absolute;
@@ -1730,9 +1730,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     overflow-x: hidden;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
-    -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transform: translateX(100%);
     visibility: hidden;
@@ -1823,7 +1821,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: absolute;
     top: 36px;
     right: 30px;
-    font: 0/0 a;
     text-shadow: none;
     color: transparent;
     z-index: 800;
@@ -1890,7 +1887,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     height: 42px;
     width: 112px;
     line-height: 42px;
-    background-color: rgba(1, 2, 3, 0.1);
+    background-color: #0C0C0C;
     color: #FFFFFF;
     border-radius: 16px 0 16px 16px;
     border: solid #4db8ff;
@@ -1898,7 +1895,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .header-menu:hover, .header-menu:focus {
-    background-color: rgba(1, 2, 3, 1);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .header-menu-toggle {
@@ -1912,13 +1910,21 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
+    color: white;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.header-menu-toggle:hover .header-menu-text, .header-menu-toggle:focus .header-menu-text {
     color: #4db8ff;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
-.header-menu-toggle:hover, .header-menu-toggle:focus {
-    color: #FFFFFF;
+.header-menu-toggle:hover .header-menu-icon, .header-menu-toggle:focus .header-menu-icon {
+    background-color: #4db8ff;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .header-menu-text {
@@ -1952,8 +1958,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background-color: inherit;
     position: absolute;
     left: 0;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
 }
 
 .header-menu-icon::before {
@@ -1979,9 +1983,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     .header-menu, .header-menu-toggle {
         right: 25px;
     }
-    .header-menu {
-        background-color: rgba(1, 2, 3, 1);
-    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1990,7 +1991,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     }
     .header-menu {
         width: 43px;
-        background-color: rgba(1, 2, 3, 1);
     }
 }
 
@@ -2499,6 +2499,34 @@ html.no-csstransitions .home-content__main {
     max-width: 1024px;
 }
 
+.about-desc figure {
+    position: relative;
+    padding: 0;
+    width: 20%;
+    margin: auto;
+    margin-bottom: 3.6rem;
+}
+
+.about-desc figure::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 50%;
+    background-image: url("../images/bhavik_images/portrait.png");
+    background-size: 100% 100%;
+    filter: blur(15px) saturate(4); /* KEY */
+}
+
+.about-desc figure img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
 
 /* ------------------------------------------------------------------- 
  * ## about stats
@@ -2513,7 +2541,7 @@ html.no-csstransitions .home-content__main {
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 2px solid rgba(255, 255, 255, 0.25);
 }
 
 .stats__col:last-child {
@@ -2527,14 +2555,44 @@ html.no-csstransitions .home-content__main {
     color: #FFFFFF;
     position: relative;
     overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
+    vertical-align: middle
+}
+
+.stats__col:last-child .stats__count code {
+    background-color: #4db8ff;
+    font-family: "montserrat-bold", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    border: 0;
+}
+
+.stats__col:last-child .stats__count {
+    width: 100%;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .03em solid white; /* The typwriter cursor */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .11em; /* Adjust as needed */
+    animation:
+            typing 3500ms steps(11, end) infinite,
+            blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    80% { border-color: white }
 }
 
 .stats h5 {
-    font-family: "montserrat-semibold", sans-serif;
-    margin-top: 1.8rem;
-    color: #000000;
+    font-family: "montserrat-medium", sans-serif;
+    color: #010507;
     font-size: 1.8rem;
     line-height: 1.333;
     position: relative;
@@ -2574,7 +2632,7 @@ html.no-csstransitions .home-content__main {
         border: none;
     }
     .stats__col:nth-child(2n+1) {
-        border-right: 1px solid rgba(255, 255, 255, 0.25);
+        border-right: 2px solid rgba(255, 255, 255, 0.25);
     }
 }
 

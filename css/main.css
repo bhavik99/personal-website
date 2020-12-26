@@ -1786,6 +1786,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: #FFFFFF;
 }
 
+.header-nav__list li a:hover,
+.header-nav__list li a:hover {
+    color: #4db8ff;
+}
+
 .header-nav__social {
     list-style: none;
     display: inline-block;
@@ -1799,13 +1804,30 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     display: inline-block;
 }
 
-.header-nav__social li a {
+.header-nav__social li a i {
     color: rgba(255, 255, 255, 0.15);
 }
 
-.header-nav__social li a:hover,
-.header-nav__social li a:focus {
-    color: white;
+.header-nav__social li a i:hover,
+.header-nav__social li a i:focus {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-nav__social li a i[class="fa fa-facebook"]:hover, .header-nav__social li a i[class="fa fa-facebook"]:focus {
+    color: #4267B2;
+}
+
+.header-nav__social li a i[class="fa fa-instagram"]:hover, .header-nav__social li a i[class="fa fa-instagram"]:focus {
+    color: #bc2a8d;
+}
+
+.header-nav__social li a i[class="fa fa-linkedin"]:hover, .header-nav__social li a i[class="fa fa-linkedin"]:focus {
+    color: #2867B2;
+}
+
+.header-nav__social li a i[class="fa fa-github"]:hover, .header-nav__social li a i[class="fa fa-github"]:focus {
+    color: #6e5494;
 }
 
 .header-nav__social li:last-child {
@@ -1824,6 +1846,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     text-shadow: none;
     color: transparent;
     z-index: 800;
+    margin-top: .4rem;
 }
 
 .header-nav__close span::before, 
@@ -2502,7 +2525,7 @@ html.no-csstransitions .home-content__main {
 .about-desc figure {
     position: relative;
     padding: 0;
-    width: 20%;
+    width: 20rem;
     margin: auto;
     margin-bottom: 3.6rem;
 }
@@ -3474,6 +3497,11 @@ html.no-csstransitions .home-content__main {
 
 .contact-social li a {
     color: white;
+}
+
+.contact-social li a i:hover, .contact-social li a i:focus {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact-social li a i[class="fa fa-facebook"]:hover, .contact-social li a i[class="fa fa-facebook"]:focus {

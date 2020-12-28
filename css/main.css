@@ -83,6 +83,20 @@ body {
     color: #757575;
     margin: 0;
     padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    /* This is the magic bit for WebKit */
+    display: none;
 }
 
 
@@ -1905,8 +1919,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header-menu {
     position: fixed;
-    right: 38px;
-    top: 24px;
+    right: 30px;
+    top: 30px;
     height: 42px;
     width: 112px;
     line-height: 42px;
@@ -1924,8 +1938,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-menu-toggle {
     position: fixed;
-    right: 38px;
-    top: 24px;
+    right: 30px;
+    top: 30px;
     height: 42px;
     width: 42px;
     line-height: 42px;
@@ -2003,8 +2017,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     .header-logo {
         left: 30px;
     }
+    .header-menu-text {
+        display: none;
+    }
     .header-menu, .header-menu-toggle {
-        right: 25px;
+        width: 43px;
+        right: 5px;
+        top: 5px;
     }
 }
 
@@ -2014,6 +2033,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     }
     .header-menu {
         width: 43px;
+        right: 5px;
+        top: 5px;
     }
 }
 
@@ -2125,8 +2146,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .home-content__scroll {
     position: absolute;
-    right: 9.5rem;
-    bottom: 8.4rem;
+    right: calc(50% - 67px);
+    bottom: 11rem;
 }
 
 .home-content__scroll a {
@@ -2161,16 +2182,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     transform: rotate(45deg);
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
-}
-
-.home-content__line {
-    display: block;
-    width: 2px;
-    height: 10.2rem;
-    background-color: #4db8ff;
-    position: absolute;
-    right: 7.2rem;
-    bottom: 0;
 }
 
 
@@ -2412,12 +2423,6 @@ html.no-csstransitions .home-content__main {
     .home-social {
         right: 4rem;
     }
-    .home-content__scroll {
-        right: 7.5rem;
-    }
-    .home-content__line {
-        right: 5.5rem;
-    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -2436,12 +2441,6 @@ html.no-csstransitions .home-content__main {
     }
     .home-social span {
         display: none;
-    }
-    .home-content__scroll {
-        bottom: 5.4rem;
-    }
-    .home-content__line {
-        height: 7.2rem;
     }
 }
 
@@ -2467,13 +2466,6 @@ html.no-csstransitions .home-content__main {
         margin: 1.5rem 0 0 0;
     }
     .home-social {
-        display: none;
-    }
-    .home-content__scroll {
-        bottom: 10%;
-        left: 33.33%;
-    }
-    .home-content__line {
         display: none;
     }
 }
@@ -2515,6 +2507,16 @@ html.no-csstransitions .home-content__main {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
+.home-about__line {
+    display: block;
+    width: 2px;
+    height: 20.4rem;
+    background-color: white;
+    position: absolute;
+    right: 50%;
+    top: -10.2rem;
+}
+
 .about-desc {
     font-size: 2.4rem;
     line-height: 1.75;
@@ -2541,7 +2543,7 @@ html.no-csstransitions .home-content__main {
     border-radius: 50%;
     background-image: url("../images/bhavik_images/portrait.png");
     background-size: 100% 100%;
-    filter: blur(15px) saturate(4); /* KEY */
+    filter: blur(15px) saturate(4);
 }
 
 .about-desc figure img{
@@ -2621,16 +2623,15 @@ html.no-csstransitions .home-content__main {
     position: relative;
 }
 
-.about__line {
+.about-bottom__line {
     display: block;
     width: 2px;
     height: 10.2rem;
-    background-color: #FFFFFF;
+    background-color: white;
     position: absolute;
     right: 7.2rem;
-    top: 0;
+    bottom: 0;
 }
-
 
 /* ------------------------------------------------------------------- 
  * responsive:
@@ -2673,7 +2674,7 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 700px) {
-    .about__line {
+    .about-bottom__line {
         right: 5.5rem;
     }
 }
@@ -2711,7 +2712,7 @@ html.no-csstransitions .home-content__main {
     .stats__col:nth-child(n) {
         border: none;
     }
-    .about__line {
+    .about-bottom__line {
         height: 7.2rem;
     }
 }
@@ -2731,7 +2732,7 @@ html.no-csstransitions .home-content__main {
  * # services
  *
  * ------------------------------------------------------------------- */
-.s-services {
+.s-education {
     padding-top: 16.2rem;
     padding-bottom: 13.2rem;
     background-color: #FFFFFF;
@@ -2739,6 +2740,15 @@ html.no-csstransitions .home-content__main {
     position: relative;
 }
 
+.education-top__line {
+    display: block;
+    width: 2px;
+    height: 10.2rem;
+    background-color: #4db8ff;
+    position: absolute;
+    right: 7.2rem;
+    top: 0;
+}
 
 /* ------------------------------------------------------------------- 
  * ## services list
@@ -2747,27 +2757,76 @@ html.no-csstransitions .home-content__main {
     margin-top: 6rem;
 }
 
-.services-list .service-item {
+.education-list .education-item {
+    margin-top: 3.6rem;
     margin-bottom: .9rem;
 }
 
-.services-list .service-item h3 {
+.education-list .education-item h3 {
     margin-top: 0;
 }
 
-.services-list .service-item:nth-child(2n+1) {
+.education-list .education-item:nth-child(2n+1) {
     padding-right: 50px;
 }
 
-.services-list .service-item:nth-child(2n+2) {
+.education-list .education-item:nth-child(2n+2) {
     padding-left: 50px;
 }
 
-.services-list .service-text {
+.education-list .br-for-small-screen {
+    display: none;
+}
+
+.education-list .education-text dd table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.education-list th, .education-list td {
+    padding-right: 2px;
+    padding-left: 0px;
+}
+
+.education-list .education-text dd .year{
+    width: 45%;
+}
+
+.education-list .education-text .level {
+    width: 30%;
+}
+
+.education-list .education-text dd .classification, .education-list .education-text dd .grade {
+    width: 20%;
+}
+
+.education-list .education-text {
     margin-left: 7.8rem;
 }
 
-.services-list .service-icon {
+.education-list .education-text dd, .education-list .education-text ul {
+    margin: 0;
+}
+
+.education-list .education-text ul li {
+    padding: 0 0 0 30px;
+    list-style: none;
+}
+
+.education-list .education-text .modules-body ul li {
+    background: url("../images/bhavik_images/icons8-macbook-idea-24.png") no-repeat left;
+}
+
+.education-list .education-text .achievements-body ul li {
+    background: url("../images/bhavik_images/icons8-prize-24.png") no-repeat left;
+}
+
+.education-list .education-text .h5 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.education-list .education-icon {
     float: left;
     color: #4db8ff;
     font-size: 4.8rem;
@@ -2780,72 +2839,94 @@ html.no-csstransitions .home-content__main {
  * services
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
-    .services-list {
+    .education-list {
         max-width: 1000px;
     }
-    .services-list .service-item:nth-child(2n+1) {
+    .education-list .education-item:nth-child(2n+1) {
         padding-right: 30px;
     }
-    .services-list .service-item:nth-child(2n+2) {
+    .education-list .education-item:nth-child(2n+2) {
         padding-left: 30px;
     }
 }
 
 @media only screen and (max-width: 1000px) {
-    .services-list h3 {
+    .education-list h3 {
         font-size: 2.5rem;
     }
-    .services-list .service-item:nth-child(2n+1) {
+    .education-list .education-item:nth-child(2n+1) {
         padding-right: 20px;
     }
-    .services-list .service-item:nth-child(2n+2) {
+    .education-list .education-item:nth-child(2n+2) {
         padding-left: 20px;
     }
 }
 
 @media only screen and (max-width: 800px) {
-    .services-list {
-        margin-top: 4.2rem;
+    .education-list {
         max-width: 500px;
         text-align: center;
     }
-    .services-list .service-item:nth-child(n) {
+    .education-list .education-item:nth-child(n) {
         padding-right: 15px;
         padding-left: 15px;
     }
-    .services-list h3 {
+    .education-list h3 {
         font-size: 3rem;
     }
-    .services-list .service-text {
+    .education-list .education-text {
         margin-left: 0;
     }
-    .services-list .service-icon {
+    .education-list .education-icon {
         font-size: 4.5rem;
         float: none;
         margin-top: 0;
     }
+    .education-list .education-text .modules-title, .education-list .education-text .modules-body,
+    .education-list .education-text .achievements-title, .education-list .education-text .achievements-body {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .education-top__line {
+        right: 5.5rem;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-    .s-services {
+    .s-education {
         padding-top: 12rem;
     }
-    .services-list .service-item:nth-child(n) {
+    .education-list .education-item:nth-child(n) {
         padding-right: 10px;
         padding-left: 10px;
     }
-    .services-list h3 {
+    .education-list h3 {
         font-size: 2.5rem;
+    }
+    .education-list .br-for-small-screen {
+        display: block;
+        line-height:30px;
+        margin:0;
+    }
+    .education-top__line {
+        height: 7.2rem;
     }
 }
 
 @media only screen and (max-width: 400px) {
-    .services-list .service-item:nth-child(n) {
+    .education-list .education-item:nth-child(n) {
         padding-right: 0;
         padding-left: 0;
     }
-    .services-list h3 {
+    .education-list h3 {
         font-size: 2.5rem;
+    }
+    .education-list .br-for-small-screen {
+        display: block;
+        line-height:30px;
+        margin:0;
     }
 }
 
@@ -3825,22 +3906,24 @@ footer .row {
     right: 30px;
     z-index: 600;
     display: none;
+
 }
 
 .go-top a, .go-top a:visited {
     text-decoration: none;
-    border: 0 none;
     display: block;
     height: 60px;
     width: 60px;
     line-height: 60px;
     text-align: center;
-    background-color: rgba(1, 2, 3, 0.1);
-    color: rgba(255, 255, 255, 0.5);
-    text-align: center;
+    background-color: #0C0C0C;
+    color: #FFFFFF;
     text-transform: uppercase;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    border-radius: 16px 16px 0px 16px;
+    border: solid #4db8ff;
+    border-width: 2px;
 }
 
 .go-top a i, .go-top a:visited i {
@@ -3903,6 +3986,17 @@ footer .row {
         right: 0;
         bottom: 0;
     }
+    .go-top, .go-top a {
+        bottom: 5px;
+        right: 5px;
+        height: 42px;
+        width: 42px;
+    }
+    .go-top a i, .go-top a:visited i {
+        font-size: 18px;
+        position: relative;
+        bottom: calc(50% - 9px)
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -3919,6 +4013,17 @@ footer .row {
     .footer-subscribe #mc-form label {
         text-align: center;
     }
+    .go-top, .go-top a {
+        bottom: 5px;
+        right: 5px;
+        height: 42px;
+        width: 42px;
+    }
+    .go-top a i, .go-top a:visited i {
+        font-size: 18px;
+        position: relative;
+        bottom: calc(50% - 9px)
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -3927,6 +4032,17 @@ footer .row {
     }
     .footer-main .right {
         padding-left: 0;
+    }
+    .go-top, .go-top a {
+        bottom: 5px;
+        right: 5px;
+        height: 42px;
+        width: 42px;
+    }
+    .go-top a i, .go-top a:visited i {
+        font-size: 18px;
+        position: relative;
+        bottom: calc(50% - 9px)
     }
 }
 

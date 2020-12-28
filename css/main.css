@@ -2510,34 +2510,11 @@ html.no-csstransitions .home-content__main {
 .home-about__line {
     display: block;
     width: 2px;
-    height: 2rem;
+    height: 20.4rem;
     background-color: white;
     position: absolute;
     right: 50%;
-    top: -1rem;
-    box-shadow:
-            rgba(255, 255, 255, 0.95) 0 -1rem,
-            rgba(255, 255, 255, 0.9) 0 -2rem,
-            rgba(255, 255, 255, 0.8) 0 -3rem,
-            rgba(255, 255, 255, 0.7) 0 -4rem,
-            rgba(255, 255, 255, 0.6) 0 -5rem,
-            rgba(255, 255, 255, 0.5) 0 -6rem,
-            rgba(255, 255, 255, 0.4) 0 -7rem,
-            rgba(255, 255, 255, 0.3) 0 -8rem,
-            rgba(255, 255, 255, 0.2) 0 -9rem,
-            rgba(255, 255, 255, 0.1) 0 -10rem,
-            rgba(255, 255, 255, 0.05) 0 -11rem,
-            rgba(255, 255, 255, 0.95) 0 1rem,
-            rgba(255, 255, 255, 0.9) 0 2rem,
-            rgba(255, 255, 255, 0.8) 0 3rem,
-            rgba(255, 255, 255, 0.7) 0 4rem,
-            rgba(255, 255, 255, 0.6) 0 5rem,
-            rgba(255, 255, 255, 0.5) 0 6rem,
-            rgba(255, 255, 255, 0.4) 0 7rem,
-            rgba(255, 255, 255, 0.3) 0 8rem,
-            rgba(255, 255, 255, 0.2) 0 9rem,
-            rgba(255, 255, 255, 0.1) 0 10rem,
-            rgba(255, 255, 255, 0.05) 0 11rem;
+    top: -10.2rem;
 }
 
 .about-desc {
@@ -3461,35 +3438,12 @@ html.no-csstransitions .home-content__main {
 .contact__line {
     display: block;
     width: 2px;
-    height: 2rem;
+    height: 20.4rem;
     background-color: #4db8ff;
     position: absolute;
-    right: 50%;
-    top: -1rem;
+    left: 50%;
+    top: -10.2rem;
     margin-left: -1px;
-    box-shadow:
-            rgba(77, 184, 255, 0.95) 0 -1rem,
-            rgba(77, 184, 255, 0.9) 0 -2rem,
-            rgba(77, 184, 255, 0.8) 0 -3rem,
-            rgba(77, 184, 255, 0.7) 0 -4rem,
-            rgba(77, 184, 255, 0.6) 0 -5rem,
-            rgba(77, 184, 255, 0.5) 0 -6rem,
-            rgba(77, 184, 255, 0.4) 0 -7rem,
-            rgba(77, 184, 255, 0.3) 0 -8rem,
-            rgba(77, 184, 255, 0.2) 0 -9rem,
-            rgba(77, 184, 255, 0.1) 0 -10rem,
-            rgba(77, 184, 255, 0.05) 0 -11rem,
-            rgba(77, 184, 255, 0.95) 0 1rem,
-            rgba(77, 184, 255, 0.9) 0 2rem,
-            rgba(77, 184, 255, 0.8) 0 3rem,
-            rgba(77, 184, 255, 0.7) 0 4rem,
-            rgba(77, 184, 255, 0.6) 0 5rem,
-            rgba(77, 184, 255, 0.5) 0 6rem,
-            rgba(77, 184, 255, 0.4) 0 7rem,
-            rgba(77, 184, 255, 0.3) 0 8rem,
-            rgba(77, 184, 255, 0.2) 0 9rem,
-            rgba(77, 184, 255, 0.1) 0 10rem,
-            rgba(77, 184, 255, 0.05) 0 11rem;
 }
 
 .contact-content {

@@ -37,8 +37,8 @@
  *      ## home animations
  *  # about
  *      ## about stats
- *  # services
- *      ## services list
+ *  # education
+ *      ## education list
  *  # works
  *      ## bricks/masonry
  *  # clients
@@ -2147,12 +2147,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .home-content__scroll {
     position: absolute;
     right: calc(50% - 67px);
-    bottom: 11rem;
+    bottom: 12rem;
 }
 
 .home-content__scroll a {
     font-family: "montserrat-semibold", sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: .3rem;
     color: #FFFFFF;
@@ -2623,7 +2623,7 @@ html.no-csstransitions .home-content__main {
     letter-spacing: .11em; /* Adjust as needed */
     animation:
             typing 3500ms steps(11, end) infinite,
-            blink-caret 0.5s step-end infinite;
+            blink-caret 0.47s step-end infinite;
 }
 
 /* The typing effect */
@@ -2644,6 +2644,8 @@ html.no-csstransitions .home-content__main {
     font-size: 1.8rem;
     line-height: 1.333;
     position: relative;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
 }
 
 .about-bottom__line {
@@ -2752,7 +2754,7 @@ html.no-csstransitions .home-content__main {
 
 
 /* ===================================================================
- * # services
+ * # education
  *
  * ------------------------------------------------------------------- */
 .s-education {
@@ -2774,9 +2776,9 @@ html.no-csstransitions .home-content__main {
 }
 
 /* ------------------------------------------------------------------- 
- * ## services list
+ * ## education list
  * ------------------------------------------------------------------- */
-.services-list {
+.education-list {
     margin-top: 6rem;
 }
 
@@ -2859,7 +2861,7 @@ html.no-csstransitions .home-content__main {
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * services
+ * education
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
     .education-list {

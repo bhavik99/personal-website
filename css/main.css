@@ -3201,7 +3201,7 @@ html.no-csstransitions .home-content__main {
     font-family: "montserrat-medium", sans-serif
 }
 
-.timeline::before {
+.timeline-middle-line {
     content: "";
     background: #4db8ff;
     width: 2px;

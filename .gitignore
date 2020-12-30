@@ -52,7 +52,8 @@ Thumbs.db
 *.pem
 
 backup*
-.idea
+*.idea
+*.iml
 
 # -------------------------
 # BEGIN Whitelisted Files

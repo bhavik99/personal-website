@@ -249,7 +249,7 @@
             arrows: false,
             dots: true,
             infinite: true,
-            slidesToShow: 6,
+            slidesToShow: 5,
             slidesToScroll: 2,
             //autoplay: true,
             pauseOnFocus: false,
@@ -425,7 +425,6 @@
             once: true,
             disable: 'mobile'
         });
-
     };
 
 
@@ -483,6 +482,19 @@
     };
 
 
+    /* Experience cards fade in direction
+    * ------------------------------------------------------ */
+    let clFadeExperienceSide = function() {
+        $(window).on('resize', function() {
+            const experienceSectionCards = $(".timeline-content");
+            if ($(window).width() < 600) {
+                experienceSectionCards.attr('data-aos', "fade-left");
+            }
+        });
+    };
+
+
+
    /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
@@ -501,6 +513,7 @@
         clAOS();
         clAjaxChimp();
         clBackToTop();
+        clFadeExperienceSide();
 
     })();
         

@@ -2543,7 +2543,7 @@ html.no-csstransitions .home-content__main {
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    background-image: url("../images/bhavik_images/portrait.png");
+    background-image: url("../images/bhavik_images/education-section/portrait.png");
     filter: blur(15px) saturate(4);
 }
 
@@ -2818,11 +2818,11 @@ html.no-csstransitions .home-content__main {
 }
 
 .education-list .education-text .modules-body ul li {
-    background: url("../images/bhavik_images/icons8-macbook-idea-24.png") no-repeat left;
+    background: url("../images/bhavik_images/education-section/icons/icons8-macbook-idea-24.png") no-repeat left;
 }
 
 .education-list .education-text .achievements-body ul li {
-    background: url("../images/bhavik_images/icons8-prize-24.png") no-repeat left;
+    background: url("../images/bhavik_images/education-section/icons/icons8-prize-24.png") no-repeat left;
 }
 
 .education-list .education-text .h5 {
@@ -3198,7 +3198,25 @@ html.no-csstransitions .home-content__main {
 }
 
 .timeline h2{
-    font-family: "montserrat-medium", sans-serif
+    color: white;
+    font-family: "montserrat-medium", sans-serif;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline h3{
+    color: #4db8ff;
+    font-family: "montserrat-regular", sans-serif;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.timeline p{
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
 }
 
 .timeline-middle-line {
@@ -3213,9 +3231,8 @@ html.no-csstransitions .home-content__main {
 .timeline-item {
     width: 100%;
     margin-bottom: 70px;
-}
-.timeline-item .timeline-content:hover, .timeline-item .timeline-content:focus {
-    background-color: #0C0C0C;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 
 .timeline-item:nth-child(even) .timeline-content:hover:after,
@@ -3226,91 +3243,109 @@ html.no-csstransitions .home-content__main {
 .timeline-item:nth-child(odd) .timeline-content:focus:after {
     border-color: transparent transparent transparent black;
 }
+
+
+.timeline-content:hover:before,
+.timeline-content:focus:before {
+    -webkit-animation: bg-pan-animation 10s ease-in-out infinite;
+    animation: bg-pan-animation 10s ease-in-out infinite;
+}
+
+@-webkit-keyframes bg-pan-animation {
+    0%{background-position:50% 100%}
+    33%{background-position:100% 0%}
+    66%{background-position:0% 50%}
+    100%{background-position:50% 100%}
+}
+@keyframes bg-pan-animation {
+    0%{background-position:50% 100%}
+    33%{background-position:100% 0%}
+    66%{background-position:0% 50%}
+    100%{background-position:50% 100%}
+}
+
 .timeline-item .timeline-content {
     color: white;
-    background-color: #6A6A6A;
+    display: block;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 2;
+    width: 45%;
+    padding: 10px 30px;
+    border-radius: 4px;
+    margin: 10px 10px;
+    overflow: hidden;
 }
+
+.timeline-item .timeline-content::before {
+    background-image: var(--experience-background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px) brightness(50%);
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.timeline-item .timeline-content .inner{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+    height: 100%;
+    display: table;
+    margin: 2rem auto;
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
 .timeline-item:nth-child(even) .timeline-content {
     float: right;
     padding: 40px 30px 10px 30px;
 }
 .timeline-item:nth-child(even) .timeline-content .date {
     right: auto;
+    z-index: 2;
     left: 0;
 }
-.timeline-item:nth-child(even) .timeline-content::after {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    width: 0;
-    height: 0;
-    top: 30px;
-    left: -15px;
-    border-width: 10px 15px 10px 0;
-    border-color: transparent #6A6A6A transparent transparent;
-}
 
-.timeline-content {
-    position: relative;
-    width: 45%;
-    padding: 10px 30px;
-    border-radius: 4px;
-    background: #f5f5f5;
-    box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
-}
-.timeline-content::after {
-    display: block;
-    clear: both;
-    content: "";
-    position: absolute;
-    border-style: solid;
-    width: 0;
-    height: 0;
-    top: 30px;
-    right: -15px;
-    border-width: 10px 0 10px 15px;
-    border-color: transparent transparent transparent #6A6A6A;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-.timeline-img {
+.timeline-icon {
+    background-image: var(--experience-icon);
     width: 30px;
     height: 30px;
-    background: #4db8ff;
+    background-size: 30px;
     border-radius: 50%;
     position: absolute;
     left: 50%;
     margin-top: 25px;
     margin-left: -15px;
+    background-repeat: no-repeat
 }
-.timeline a {
-    background: #4db8ff;
-    color: #fff;
-    padding: 8px 20px;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    display: inline-block;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.6);
-}
-.timeline a:hover, .timeline a:active, .timeline a:focus {
-    background: #1aa4ff;
-    color: #fff;
-    text-decoration: none;
-}
+
 .timeline-card {
     padding: 0 !important;
 }
-.timeline-card p {
-    padding: 0 20px;
+
+.timeline-content .inner ul li {
+    background-image: url("../images/bhavik_images/experience-section/icons/icons8-goal-48.png");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 0 5px;
+    padding: 0 0 0 30px;
+    list-style: none;
+    margin: 0;
 }
-.timeline-card a {
-    margin-left: 20px;
-}
+
 .timeline-item .timeline-img-header {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url("https://picsum.photos/1000/800/?random") center center no-repeat;
     background-size: cover;
@@ -3320,9 +3355,7 @@ html.no-csstransitions .home-content__main {
     position: relative;
     margin-bottom: 20px;
 }
-.timeline h2{
-    color: white;
-}
+
 .timeline-img-header h2 {
     position: absolute;
     bottom: 5px;
@@ -3332,38 +3365,14 @@ html.no-csstransitions .home-content__main {
     font-family: "montserrat-medium", sans-serif;
     background: #4db8ff;
     display: inline-block;
-    color: #fff;
-    padding: 10px;
+    color: white;
+    margin: 10px;
+    padding: 0 5px;
     position: absolute;
     top: 0;
     right: 0;
-}
-@media screen and (max-width: 768px) {
-    .timeline::before {
-        left: 50px;
-    }
-    .timeline .timeline-img {
-        left: 50px;
-    }
-    .timeline .timeline-content {
-        max-width: 100%;
-        width: auto;
-        margin-left: 70px;
-    }
-    .timeline .timeline-item:nth-child(even) .timeline-content {
-        float: none;
-    }
-    .timeline .timeline-item:nth-child(odd) .timeline-content::after {
-        content: "";
-        position: absolute;
-        border-style: solid;
-        width: 0;
-        height: 0;
-        top: 30px;
-        left: -15px;
-        border-width: 10px 15px 10px 0;
-        border-color: transparent #f5f5f5 transparent transparent;
-    }
+    border-radius: 4px;
+    text-transform: uppercase;
 }
 
 
@@ -3554,6 +3563,39 @@ html.no-csstransitions .home-content__main {
     }
     .clients-testimonials .testimonials p {
         font-size: 2rem;
+    }
+    .timeline-middle-line {
+        left: 50px;
+    }
+    .timeline .timeline-icon {
+        left: 50px;
+    }
+    .timeline .timeline-content {
+        max-width: 100%;
+        width: auto;
+        margin-left: 50px;
+    }
+    .timeline .timeline-item:nth-child(even) .timeline-content {
+        float: none;
+    }
+    .timeline-item:nth-child(odd) .timeline-content:hover:after,
+    .timeline-item:nth-child(odd) .timeline-content:focus:after {
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        border-color: transparent black transparent transparent;
+    }
+    .timeline-card p {
+        padding: 0 20px 30px;
+    }
+    .timeline-content:hover:before,
+    .timeline-content:focus:before {
+        -webkit-animation: bg-pan-animation 20s ease-in-out infinite;
+        animation: bg-pan-animation 20s ease-in-out infinite;
+    }
+    .timeline .date{
+        right: auto;
+        z-index: 2;
+        left: 0;
     }
 }
 
@@ -4038,7 +4080,7 @@ footer .row {
     border: none;
     width: 100px;
     height: 28px;
-    background: url("../images/bhavik_images/logo-footer.png") no-repeat center;
+    background: url("../images/bhavik_images/footer/logo-footer.png") no-repeat center;
     background-size: 100px;
     text-shadow: none;
     color: transparent;

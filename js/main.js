@@ -485,12 +485,10 @@
     /* Experience cards fade in direction
     * ------------------------------------------------------ */
     let clFadeExperienceSide = function() {
-        $(window).on('resize', function() {
-            const experienceSectionCards = $(".timeline-content");
-            if ($(window).width() < 600) {
-                experienceSectionCards.attr('data-aos', "fade-left");
-            }
-        });
+        const experienceSectionCards = $(".timeline-content");
+        if ($(window).width() < 600) {
+            experienceSectionCards.attr('data-aos', "fade-left");
+        }
     };
 
 

@@ -2927,11 +2927,6 @@ html.no-csstransitions .home-content__main {
     .education-list h3 {
         font-size: 2.5rem;
     }
-    .education-list .br-for-small-screen {
-        display: block;
-        line-height:30px;
-        margin:0;
-    }
 }
 
 
@@ -3375,6 +3370,10 @@ html.no-csstransitions .home-content__main {
     text-transform: uppercase;
 }
 
+.timeline .date .br-for-small-screen {
+    display: none;
+}
+
 
 /* ------------------------------------------------------------------- 
  * ## slider
@@ -3486,7 +3485,6 @@ html.no-csstransitions .home-content__main {
     cursor: pointer;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    font: 0/0 a;
     text-shadow: none;
     color: transparent;
     z-index: 2;
@@ -3596,6 +3594,17 @@ html.no-csstransitions .home-content__main {
         right: auto;
         z-index: 2;
         left: 0;
+    }
+    .timeline h2 {
+        margin-top: 9.2rem;
+    }
+    .timeline .date .br-for-small-screen {
+        display: block;
+        line-height:30px;
+        margin:0;
+    }
+    .timeline-content .inner ul {
+        margin-left: 0;
     }
 }
 

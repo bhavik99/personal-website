@@ -3226,8 +3226,8 @@ html.no-csstransitions .home-content__main {
 .timeline-item {
     width: 100%;
     margin-bottom: 70px;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
 .timeline-item:nth-child(even) .timeline-content:hover:after,
@@ -3588,8 +3588,7 @@ html.no-csstransitions .home-content__main {
     .timeline-card p {
         padding: 0 20px 30px;
     }
-    .timeline-content:hover:before,
-    .timeline-content:focus:before {
+    .timeline-content:before {
         -webkit-animation: bg-pan-animation 20s ease-in-out infinite;
         animation: bg-pan-animation 20s ease-in-out infinite;
     }

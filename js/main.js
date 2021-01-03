@@ -485,10 +485,11 @@
     /* Experience cards fade in direction
     * ------------------------------------------------------ */
     let clFadeExperienceSide = function() {
-        const experienceSectionCards = $(".timeline-content");
-        if ($(window).width() < 600) {
-            experienceSectionCards.attr('data-aos', "fade-left");
-        }
+        $('.timeline-content').each(function(i, obj) {
+            if ($(window).width() < 600) {
+                $(this).attr('data-aos', "fade-left");
+            }
+        });
     };
 
 
@@ -511,7 +512,7 @@
         clAOS();
         clAjaxChimp();
         clBackToTop();
-        clFadeExperienceSide();
+        //clFadeExperienceSide();
 
     })();
         

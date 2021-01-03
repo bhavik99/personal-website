@@ -487,7 +487,7 @@
     let clFadeExperienceSide = function() {
         $('.timeline-content').each(function(i, obj) {
             if ($(window).width() < 600) {
-                $(this).attr('data-aos', "fade-left");
+                $(this).attr('data-aos', "fade-up");
             }
         });
     };
@@ -512,7 +512,7 @@
         clAOS();
         clAjaxChimp();
         clBackToTop();
-        //clFadeExperienceSide();
+        clFadeExperienceSide();
 
     })();
         

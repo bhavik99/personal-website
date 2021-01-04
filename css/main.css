@@ -1704,7 +1704,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 40px;
+    left: 30px;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -1718,7 +1718,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 0;
     outline: 0;
     border: none;
-    width: 190px;
+    width: 40%;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -2013,9 +2013,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 @media only screen and (max-width: 600px) {
     .s-header {
         height: 90px;
-    }
-    .header-logo {
-        left: 30px;
     }
     .header-menu-text {
         display: none;

@@ -3260,10 +3260,6 @@ html.no-csstransitions .home-content__main {
     100%{background-position:50% 100%}
 }
 
-.timeline-content:before:hover {
-
-}
-
 .timeline-item .timeline-content {
     color: white;
     display: block;

@@ -1718,7 +1718,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 0;
     outline: 0;
     border: none;
-    width: 40%;
+    width: 350px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -1920,8 +1920,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .header-menu {
     position: fixed;
     right: 30px;
-    top: 30px;
-    height: 42px;
+    top: 1%;
+    height: 45px;
     width: 112px;
     line-height: 42px;
     background-color: #0C0C0C;
@@ -1938,11 +1938,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-menu-toggle {
     position: fixed;
-    right: 30px;
-    top: 30px;
-    height: 42px;
+    right: inherit;
+    height: 40px;
     width: 42px;
-    line-height: 42px;
     font-family: "montserrat-medium", sans-serif;
     font-size: 1.3rem;
     text-transform: uppercase;
@@ -2019,8 +2017,16 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     }
     .header-menu, .header-menu-toggle {
         width: 43px;
+        height: 42px;
         right: 5px;
         top: 5px;
+    }
+    .header-logo {
+        top: 30px;
+        left: 5px;
+    }
+    .header-logo a {
+        width: 240px;
     }
 }
 

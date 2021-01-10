@@ -3242,11 +3242,9 @@ html.no-csstransitions .home-content__main {
     border-color: transparent transparent transparent black;
 }
 
-
-.timeline-content:hover:before,
-.timeline-content:focus:before {
-    -webkit-animation: bg-pan-animation 10s ease-in-out infinite;
-    animation: bg-pan-animation 10s ease-in-out infinite;
+.timeline-content:before {
+    -webkit-animation: bg-pan-animation 20s ease-in-out infinite;
+    animation: bg-pan-animation 20s ease-in-out infinite;
 }
 
 @-webkit-keyframes bg-pan-animation {
@@ -3566,15 +3564,15 @@ html.no-csstransitions .home-content__main {
         font-size: 2rem;
     }
     .timeline-middle-line {
-        left: 50px;
+        left: 30px;
     }
     .timeline .timeline-icon {
-        left: 50px;
+        left: 30px;
     }
     .timeline .timeline-content {
         max-width: 100%;
-        width: auto;
-        margin-left: 50px;
+        width: 100%;
+        margin-left: 20px;
     }
     .timeline .timeline-item {
         overflow-x: hidden;
@@ -3590,10 +3588,6 @@ html.no-csstransitions .home-content__main {
     }
     .timeline-card p {
         padding: 0 20px 30px;
-    }
-    .timeline-content:before {
-        -webkit-animation: bg-pan-animation 20s ease-in-out infinite;
-        animation: bg-pan-animation 20s ease-in-out infinite;
     }
     .timeline .date{
         right: auto;

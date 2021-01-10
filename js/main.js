@@ -372,38 +372,24 @@
                 var sLoader = $('.submit-loader');
     
                 $.ajax({
-    
+
                     type: "POST",
-                    url: "inc/sendEmail.php",
+                    url: "https://formspree.io/f/mgeprzjr",
+                    dataType: "json",
                     data: $(form).serialize(),
-                    beforeSend: function() { 
-    
+                    beforeSend: function () {
                         sLoader.slideDown("slow");
-    
                     },
-                    success: function(msg) {
-    
-                        // Message was sent
-                        if (msg == 'OK') {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').fadeOut();
-                            $('#contactForm').fadeOut();
-                            $('.message-success').fadeIn();
-                        }
-                        // There was an error
-                        else {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').html(msg);
-                            $('.message-warning').slideDown("slow");
-                        }
-    
+                    success: function (msg) {
+                        sLoader.slideUp("slow");
+                        $('.message-warning').fadeOut();
+                        $('#contactForm').fadeOut();
+                        $('.message-success').fadeIn();
                     },
                     error: function() {
-    
                         sLoader.slideUp("slow"); 
                         $('.message-warning').html("Something went wrong. Please try again.");
                         $('.message-warning').slideDown("slow");
-    
                     }
     
                 });
@@ -486,7 +472,7 @@
     let clFadeExperienceSide = function() {
         $('.timeline-content').each(function(i, obj) {
             if ($(window).width() < 600) {
-                $(this).attr('data-aos', "fade-up");
+                $(this).attr('data-aos', "fade-left");
             }
         });
     };

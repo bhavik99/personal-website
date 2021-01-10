@@ -374,24 +374,30 @@
                 $.ajax({
 
                     type: "POST",
-                    url: "https://formspree.io/f/mgeprzjr",
-                    dataType: "json",
+                    url: "https://script.google.com/macros/s/AKfycbwKCOs4D1IyOmzuUQm4gKIbW-NbdCA4O-l4K7lm1ZmfqiNp1hXE_SwCuQ/exec",
                     data: $(form).serialize(),
                     beforeSend: function () {
                         sLoader.slideDown("slow");
                     },
-                    success: function (msg) {
-                        sLoader.slideUp("slow");
-                        $('.message-warning').fadeOut();
-                        $('#contactForm').fadeOut();
-                        $('.message-success').fadeIn();
+                    success: function (response) {
+                        console.log("response:" + JSON.stringify(response))
+                        if (response.result === "success") {
+                            sLoader.slideUp("slow");
+                            $('.message-warning').fadeOut();
+                            $('#contactForm').fadeOut();
+                            $('.message-success').fadeIn();
+                        } else {
+                            sLoader.slideUp("slow");
+                            $('.message-warning').html("Something went wrong. Please try again.");
+                            $('.message-warning').slideDown("slow");
+                        }
                     },
-                    error: function() {
-                        sLoader.slideUp("slow"); 
+                    error: function () {
+                        sLoader.slideUp("slow");
                         $('.message-warning').html("Something went wrong. Please try again.");
                         $('.message-warning').slideDown("slow");
                     }
-    
+
                 });
             }
     

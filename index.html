@@ -490,23 +490,23 @@
 
             <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
                 <fieldset>
-
                     <div class="form-field">
-                        <input name="contactName" type="text" id="contactName" placeholder="Your Name*" value=""
-                               minlength="2" required="" aria-required="true" class="full-width">
+                        <input aria-required="true" class="full-width" id="name" minlength="2" name="name"
+                               placeholder="Your Name*" required="" type="text" value="">
                     </div>
                     <div class="form-field">
-                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email*" value=""
-                               required="" aria-required="true" class="full-width">
+                        <input aria-required="true" class="full-width" id="contactEmail" name="email"
+                               placeholder="Your Email*"
+                               required="" type="email" value="">
                     </div>
                     <div class="form-field">
-                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value=""
-                               class="full-width">
+                        <input class="full-width" id="contactSubject" name="subject" placeholder="Subject" type="text"
+                               value="">
                     </div>
                     <div class="form-field">
-                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message*" rows="10"
-                                  cols="50" required="" minlength="15" aria-required="true"
-                                  class="full-width"></textarea>
+                        <textarea aria-required="true" class="full-width" cols="50" id="contactMessage"
+                                  minlength="15" name="message" placeholder="Your Message*" required=""
+                                  rows="10"></textarea>
                     </div>
                     <div class="form-field">
                         <button class="full-width btn--primary" value="click">Submit</button>

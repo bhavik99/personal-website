@@ -380,7 +380,6 @@
                         sLoader.slideDown("slow");
                     },
                     success: function (response) {
-                        console.log("response:" + JSON.stringify(response))
                         if (response.result === "success") {
                             sLoader.slideUp("slow");
                             $('.message-warning').fadeOut();

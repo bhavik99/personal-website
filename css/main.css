@@ -1,4 +1,4 @@
-/* =================================================================== 
+/* ===================================================================
  *
  *  Glint v1.0 Main Stylesheet
  *  11-20-2017
@@ -22,18 +22,18 @@
  *  # additional components
  *      ## alert box
  *      ## additional typo styles
- *      ## skillbars 
+ *      ## skillbars
  *  # reusable and common theme styles
  *      ## display headings
  *      ## section header
  *      ## slick slider
  *  # header styles
  *      ## header logo
- *      ## main navigation 
- *      ## mobile menu toggle 
- *  # home 
+ *      ## main navigation
+ *      ## mobile menu toggle
+ *  # home
  *      ## home content
- *      ## home social 
+ *      ## home social
  *      ## home animations
  *  # about
  *      ## about stats
@@ -100,7 +100,7 @@ body::-webkit-scrollbar {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## links
  * ------------------------------------------------------------------- */
 a {
@@ -118,12 +118,11 @@ a:hover, a:active {
 }
 
 
-
 /* ===================================================================
  * # typography & general theme styles
- * 
+ *
  * ------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6, 
+h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "montserrat-medium", sans-serif;
     color: #000000;
@@ -243,7 +242,7 @@ blockquote {
 blockquote:before {
     content: "\201C";
     font-size: 10rem;
-    line-height: 0px;
+    line-height: 0;
     margin: 0;
     color: rgba(0, 0, 0, 0.25);
     font-family: arial, sans-serif;
@@ -341,7 +340,7 @@ hr {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## Lists
  * ------------------------------------------------------------------- */
 ol {
@@ -398,7 +397,7 @@ dd {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## responsive video container
  * ------------------------------------------------------------------- */
 .video-container {
@@ -420,7 +419,7 @@ dd {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## floated image
  * ------------------------------------------------------------------- */
 img.pull-right {
@@ -432,7 +431,7 @@ img.pull-left {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## tables
  * ------------------------------------------------------------------- */
 table {
@@ -471,8 +470,8 @@ th:last-child, td:last-child {
 }
 
 
-/* ------------------------------------------------------------------- 
- * ## Spacing 
+/* -------------------------------------------------------------------
+ * ## Spacing
  * ------------------------------------------------------------------- */
 button, .btn {
     margin-bottom: 1.2rem;
@@ -500,7 +499,7 @@ form,
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## pace.js styles - minimal
  * ------------------------------------------------------------------- */
 .pace {
@@ -855,6 +854,26 @@ form,
 }
 
 
+/* ===================================================================
+ * # scroll progress bar
+ *
+ * ------------------------------------------------------------------- */
+/* The progress container (grey background) */
+.progress-container {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background: transparent;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+    height: 5px;
+    background: #0C0C0C;
+    width: 0;
+}
+
 
 /* ===================================================================
  * # forms
@@ -984,7 +1003,7 @@ label > .label-text {
     line-height: inherit;
 }
 
-label > input[type="checkbox"], 
+label > input[type="checkbox"],
 label > input[type="radio"] {
     margin: 0;
     position: relative;
@@ -992,7 +1011,7 @@ label > input[type="radio"] {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## style placeholder text
  * ------------------------------------------------------------------- */
 ::-webkit-input-placeholder {
@@ -1018,7 +1037,7 @@ label > input[type="radio"] {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## change autocomplete styles in chrome
  * ------------------------------------------------------------------- */
 input:-webkit-autofill,
@@ -1150,13 +1169,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* =================================================================== 
+/* ===================================================================
  * # additional components
  *
  * ------------------------------------------------------------------- */
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## alert box
  * ------------------------------------------------------------------- */
 .alert-box {
@@ -1201,12 +1220,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
- * ## additional typo styles 
+/* -------------------------------------------------------------------
+ * ## additional typo styles
  * ------------------------------------------------------------------- */
 
 
-/* drop cap 
+/* drop cap
  * ----------------------------------------------- */
 .drop-cap:first-letter {
     float: left;
@@ -1222,7 +1241,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* line definition style 
+/* line definition style
  * ----------------------------------------------- */
 .lining dt, .lining dd {
     display: inline;
@@ -1248,7 +1267,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* dictionary definition style 
+/* dictionary definition style
  * ----------------------------------------------- */
 .dictionary-style dt {
     display: inline;
@@ -1270,7 +1289,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/** 
+/**
  * Pull Quotes
  * -----------
  * markup:
@@ -1285,14 +1304,14 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .pull-quote {
     position: relative;
-    padding: 2.1rem 3rem 2.1rem 0px;
+    padding: 2.1rem 3rem 2.1rem 0;
 }
 
 .pull-quote:before, .pull-quote:after {
     height: 1em;
     position: absolute;
     font-size: 10rem;
-    font-family: Arial, Sans-Serif;
+    font-family: Arial, Sans-Serif, serif;
     color: rgba(0, 0, 0, 0.25);
 }
 
@@ -1317,7 +1336,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/** 
+/**
  * Stats Tab
  * ---------
  * markup:
@@ -1370,8 +1389,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
- * ## skillbars 
+/* -------------------------------------------------------------------
+ * ## skillbars
  * ------------------------------------------------------------------- */
 .skill-bars {
     list-style: none;
@@ -1466,7 +1485,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## display headings
  * ------------------------------------------------------------------- */
 .display-1 {
@@ -1513,7 +1532,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * display headings
  * ------------------------------------------------------------------- */
@@ -1557,7 +1576,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## section header
  * ------------------------------------------------------------------- */
 .section-header {
@@ -1591,7 +1610,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * section-header
  * ------------------------------------------------------------------- */
@@ -1626,8 +1645,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
- * ## slick slider 
+/* -------------------------------------------------------------------
+ * ## slick slider
  * ------------------------------------------------------------------- */
 .slick-slider .slick-slide {
     outline: none;
@@ -1665,7 +1684,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 0;
     margin: 0;
     cursor: pointer;
-    font: 0/0 a;
     text-shadow: none;
     color: transparent;
 }
@@ -1724,8 +1742,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
- * ## main navigation 
+/* -------------------------------------------------------------------
+ * ## main navigation
  * ------------------------------------------------------------------- */
 .header-nav {
     background: #0C0C0C;
@@ -1863,7 +1881,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-top: .4rem;
 }
 
-.header-nav__close span::before, 
+.header-nav__close span::before,
 .header-nav__close span::after {
     content: "";
     display: block;
@@ -1914,8 +1932,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
- * ## mobile menu toggle 
+/* -------------------------------------------------------------------
+ * ## mobile menu toggle
  * ------------------------------------------------------------------- */
 .header-menu {
     position: fixed;
@@ -2004,7 +2022,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * header
  * ------------------------------------------------------------------- */
@@ -2042,9 +2060,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-
 /* ===================================================================
- * # home 
+ * # home
  *
  * ------------------------------------------------------------------- */
 .s-home {
@@ -2066,7 +2083,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
     background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
 }
 
 .s-home .overlay {
@@ -2084,7 +2100,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## home content
  * ------------------------------------------------------------------- */
 .home-content {
@@ -2141,7 +2157,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-right: 0;
 }
 
-.home-content__buttons .btn:hover, 
+.home-content__buttons .btn:hover,
 .home-content__buttons .btn:focus {
     background: #FFFFFF !important;
     color: #000000;
@@ -2188,8 +2204,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 
-/* ------------------------------------------------------------------- 
- * ## home social 
+/* -------------------------------------------------------------------
+ * ## home social
  * ------------------------------------------------------------------- */
 .home-social {
     font-family: "montserrat-regular", sans-serif;
@@ -2296,7 +2312,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## home animations
  * ------------------------------------------------------------------- */
 
@@ -2361,7 +2377,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * home
  * ------------------------------------------------------------------- */
@@ -2558,7 +2574,7 @@ html.no-csstransitions .home-content {
     border-radius: 50%;
 }
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## about stats
  * ------------------------------------------------------------------- */
 .about-stats {
@@ -2640,7 +2656,7 @@ html.no-csstransitions .home-content {
     bottom: 0;
 }
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * about
  * ------------------------------------------------------------------- */
@@ -2690,18 +2706,22 @@ html.no-csstransitions .home-content {
     .s-about {
         padding-top: 12rem;
     }
+
     .about-desc {
         font-size: 1.9rem;
     }
+
     .about-stats {
         padding-top: 0;
     }
+
     .stats__col {
         margin: 0;
         padding-top: 3rem;
         padding-bottom: 3rem;
         position: relative;
     }
+
     .stats__col::after {
         content: "";
         display: block;
@@ -2713,14 +2733,22 @@ html.no-csstransitions .home-content {
         left: 50%;
         margin-left: -125px;
     }
+
     .stats__col:last-child::after {
         display: none;
     }
+
     .stats__col:nth-child(n) {
         border: none;
     }
+
     .about-bottom__line {
         height: 7.2rem;
+    }
+
+    .stats__col:last-child .stats__count {
+        animation: typing 3500ms steps(13, end) infinite,
+        blink-caret 0.47s step-end infinite;
     }
 }
 
@@ -2757,7 +2785,7 @@ html.no-csstransitions .home-content {
     top: 0;
 }
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## education list
  * ------------------------------------------------------------------- */
 .education-list {
@@ -2792,7 +2820,7 @@ html.no-csstransitions .home-content {
 
 .education-list th, .education-list td {
     padding-right: 2px;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .education-list .education-text dd .year{
@@ -2841,7 +2869,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * education
  * ------------------------------------------------------------------- */
@@ -2956,7 +2984,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## bricks/masonry
  * ------------------------------------------------------------------- */
 .masonry:after {
@@ -3110,7 +3138,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* on hover 
+/* on hover
  * ----------------------------------------------- */
 .item-folio:hover .item-folio__thumb a::before {
     opacity: 1;
@@ -3141,7 +3169,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * works
  * ------------------------------------------------------------------- */
@@ -3248,16 +3276,33 @@ html.no-csstransitions .home-content {
 }
 
 @-webkit-keyframes bg-pan-animation {
-    0%{background-position:50% 100%}
-    33%{background-position:100% 0%}
-    66%{background-position:0% 50%}
-    100%{background-position:50% 100%}
+    0% {
+        background-position: 50% 100%
+    }
+    33% {
+        background-position: 100% 0
+    }
+    66% {
+        background-position: 0 50%
+    }
+    100% {
+        background-position: 50% 100%
+    }
 }
+
 @keyframes bg-pan-animation {
-    0%{background-position:50% 100%}
-    33%{background-position:100% 0%}
-    66%{background-position:0% 50%}
-    100%{background-position:50% 100%}
+    0% {
+        background-position: 50% 100%
+    }
+    33% {
+        background-position: 100% 0
+    }
+    66% {
+        background-position: 0 50%
+    }
+    100% {
+        background-position: 50% 100%
+    }
 }
 
 .timeline-item .timeline-content {
@@ -3376,7 +3421,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## slider
  * ------------------------------------------------------------------- */
 .clients-outer {
@@ -3408,7 +3453,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## testimonials
  * ------------------------------------------------------------------- */
 .clients-testimonials {
@@ -3456,7 +3501,7 @@ html.no-csstransitions .home-content {
     margin: 0 auto 1.2rem auto;
 }
 
-.clients-testimonials .testimonials__name, 
+.clients-testimonials .testimonials__name,
 .clients-testimonials .testimonials__pos {
     display: block;
 }
@@ -3506,7 +3551,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * clients
  * ------------------------------------------------------------------- */
@@ -3614,9 +3659,8 @@ html.no-csstransitions .home-content {
 }
 
 
-
 /* ===================================================================
- * # contact 
+ * # contact
  *
  * ------------------------------------------------------------------- */
 .s-contact {
@@ -3848,7 +3892,7 @@ html.no-csstransitions .home-content {
     margin: 0;
 }
 
-.message-warning, 
+.message-warning,
 .message-success {
     display: none;
     background: #111111;
@@ -3905,8 +3949,8 @@ html.no-csstransitions .home-content {
 }
 
 
-/* --------------------------------------------------------------- 
- * ## loader animation 
+/* ---------------------------------------------------------------
+ * ## loader animation
  * --------------------------------------------------------------- */
 .s-loader {
     margin: 1.2rem auto 3rem;
@@ -3965,7 +4009,7 @@ html.no-csstransitions .home-content {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * contact
  * ------------------------------------------------------------------- */
@@ -4065,7 +4109,7 @@ footer .row {
 }
 
 
-/* --------------------------------------------------------------- 
+/* ---------------------------------------------------------------
  * ## footer main
  * --------------------------------------------------------------- */
 .footer-main {
@@ -4140,7 +4184,7 @@ footer .row {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## go to top
  * ------------------------------------------------------------------- */
 .go-top {
@@ -4164,7 +4208,7 @@ footer .row {
     text-transform: uppercase;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    border-radius: 16px 16px 0px 16px;
+    border-radius: 16px 16px 0 16px;
     border: solid #4db8ff;
     border-width: 2px;
 }
@@ -4180,7 +4224,7 @@ footer .row {
 }
 
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * responsive:
  * footer
  * ------------------------------------------------------------------- */

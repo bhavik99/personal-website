@@ -155,73 +155,26 @@
    /* Stat Counter
     * ------------------------------------------------------ */
     var clStatCount = function() {
-        
+
         var statSection = $(".about-stats"),
-            stats = $(".stats__counta");
+            stats = $(".stats__count .num");
 
         statSection.waypoint({
-
             handler: function(direction) {
-
                 if (direction === "down") {
-
-                    var TxtRotate = function(el, toRotate, period) {
-                        this.toRotate = toRotate;
-                        this.el = el;
-                        this.loopNum = 0;
-                        this.period = parseInt(period, 10) || 2000;
-                        this.txt = '';
-                        this.tick();
-                        this.isDeleting = false;
-                    };
-
-                    TxtRotate.prototype.tick = function() {
-                        var i = this.loopNum % this.toRotate.length;
-                        var fullTxt = this.toRotate[i];
-
-                        if (this.isDeleting) {
-                            this.txt = fullTxt.substring(0, this.txt.length - 1);
-                        } else {
-                            this.txt = fullTxt.substring(0, this.txt.length + 1);
-                        }
-
-                        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-                        var that = this;
-                        var delta = 300 - Math.random() * 100;
-
-                        if (this.isDeleting) { delta /= 2; }
-
-                        if (!this.isDeleting && this.txt === fullTxt) {
-                            delta = this.period;
-                            this.isDeleting = true;
-                        } else if (this.isDeleting && this.txt === '') {
-                            this.isDeleting = false;
-                            this.loopNum++;
-                            delta = 500;
-                        }
-
-                        setTimeout(function() {
-                            that.tick();
-                        }, delta);
-                    };
-
-                    for (var i=0; i<stats.length; i++) {
-                        var toRotate = stats[i].getAttribute('data-rotate');
-                        var period = stats[i].getAttribute('data-period');
-                        if (toRotate) {
-                            new TxtRotate(stats[i], JSON.parse(toRotate), period);
-                        }
-                    }
+                    stats.each(function () {
+                        var $this = $(this);
+                        $({Counter: 0}).animate({Counter: $this.text()}, {
+                            duration: 3000,
+                            easing: 'swing',
+                            step: function (curValue) {
+                                $this.text(Math.ceil(curValue));
+                            }
+                        });
+                    });
                 }
-
-                // trigger once only
-                this.destroy();
-
             },
-
             offset: "90%"
-
         });
     };
 
@@ -407,7 +360,6 @@
    /* Animate On Scroll
     * ------------------------------------------------------ */
     var clAOS = function() {
-        
         AOS.init( {
             offset: 200,
             duration: 600,
@@ -474,8 +426,8 @@
 
     /* Experience cards fade in direction
     * ------------------------------------------------------ */
-    let clFadeExperienceSide = function() {
-        $('.timeline-content').each(function(i, obj) {
+    let clFadeExperienceSide = function () {
+        $('.timeline-content').each(function (i, obj) {
             if ($(window).width() < 600) {
                 $(this).attr('data-aos', "fade-left");
             }
@@ -483,11 +435,29 @@
     };
 
 
-
-   /* Initialize
+    /* Scroll Progress Bar
     * ------------------------------------------------------ */
+    let clScrollProgressBar = (function () {
+
+        $WIN.scroll(function () {
+            myFunction()
+        });
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+
+
+    });
+
+
+    /* Initialize
+     * ------------------------------------------------------ */
     (function ssInit() {
-        
+
         clPreloader();
         clMenuOnScrolldown();
         clOffCanvas();
@@ -503,7 +473,7 @@
         clAjaxChimp();
         clBackToTop();
         clFadeExperienceSide();
-
+        clScrollProgressBar();
     })();
         
         

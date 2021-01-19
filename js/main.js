@@ -336,18 +336,24 @@
                         if (response.result === "success") {
                             sLoader.slideUp("slow");
                             $('.message-warning').fadeOut();
-                            $('#contactForm').fadeOut();
-                            $('.message-success').fadeIn();
+                            $('#contactForm').fadeOut(function () {
+                                $('#contactForm')[0].reset();
+                                $('.form-field .btn--primary').html('Submit Again');
+                                $('.message-success').fadeIn().delay(5000).queue(function () {
+                                    $('.message-success').fadeOut()
+                                    $('#contactForm').fadeIn()
+                                    $('.contact-primary .h6').html('Send me another message');
+                                    $('.message-success').dequeue()
+                                })
+                            });
                         } else {
                             sLoader.slideUp("slow");
-                            $('.message-warning').html("Something went wrong. Please try again.");
-                            $('.message-warning').slideDown("slow");
+                            $('.message-warning').html("Something went wrong. Please try again.").slideDown("slow");
                         }
                     },
                     error: function () {
                         sLoader.slideUp("slow");
-                        $('.message-warning').html("Something went wrong. Please try again.");
-                        $('.message-warning').slideDown("slow");
+                        $('.message-warning').html("Something went wrong. Please try again.").slideDown("slow");
                     }
 
                 });

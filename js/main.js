@@ -198,7 +198,7 @@
     * ------------------------------------------------------ */
     var clSlickSlider = function() {
 
-        $('.clients').slick({
+        $('.companies').slick({
             arrows: false,
             dots: true,
             infinite: true,

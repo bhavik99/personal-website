@@ -547,6 +547,12 @@ form,
     display: table;
 }
 
+.w-i-p {
+    color: white;
+    font-family: "montserrat-medium", sans-serif;
+    font-size: 3.2rem;
+}
+
 .no-js #preloader, .oldie #preloader {
     display: none;
 }
@@ -2956,11 +2962,187 @@ html.no-csstransitions .home-content {
         padding-right: 0;
         padding-left: 0;
     }
+
     .education-list h3 {
         font-size: 2.5rem;
     }
 }
 
+
+/* ===================================================================
+ * # skills
+ *
+ * ------------------------------------------------------------------- */
+.s-skills {
+    padding-top: 16.2rem;
+    padding-bottom: 9rem;
+    background-color: #4db8ff;
+    color: #010507;
+    position: relative;
+}
+
+.s-skills .section-header.has-bottom-sep::before {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.home-skills__line {
+    display: block;
+    width: 2px;
+    height: 20.4rem;
+    background-color: white;
+    position: absolute;
+    right: 50%;
+    top: -10.2rem;
+}
+
+.skills-desc {
+    font-size: 2.4rem;
+    line-height: 1.75;
+    text-align: center;
+    max-width: 1024px;
+}
+
+/* -------------------------------------------------------------------
+ * ## skillbars
+ * ------------------------------------------------------------------- */
+.skill-bars {
+    list-style: none;
+    margin: 6rem 0 3rem;
+}
+
+.skill-bars li {
+    background: white;
+}
+
+.skill-bars li strong {
+    color: black;
+}
+
+.skill-bars li .progress {
+    background: black;
+}
+
+.skill-bars li .progress span {
+    background: black;
+    color: white;
+}
+
+.skill-bars li .progress span::after {
+    border-top: 5px solid black;
+}
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * skills
+ * ------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+    .skills-desc {
+        font-size: 2.2rem;
+        max-width: 940px;
+    }
+
+    .skills-stats {
+        padding-top: 3rem;
+        padding-bottom: 3.9rem;
+    }
+
+    .skills-stats {
+        max-width: 800px;
+    }
+
+    .stats__col {
+        margin: 1.5rem 0;
+    }
+
+    .stats__col:nth-child(n) {
+        border: none;
+    }
+
+    .stats__col:nth-child(2n+1) {
+        border-right: 2px solid rgba(255, 255, 255, 0.25);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .skills-desc {
+        font-size: 2rem;
+        max-width: 600px;
+    }
+
+    .stats__count {
+        font-size: 8rem;
+    }
+
+    .stats h5 {
+        margin-top: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .skills-bottom__line {
+        right: 5.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .s-skills {
+        padding-top: 12rem;
+    }
+
+    .skills-desc {
+        font-size: 1.9rem;
+    }
+
+    .skills-stats {
+        padding-top: 0;
+    }
+
+    .stats__col {
+        margin: 0;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        position: relative;
+    }
+
+    .stats__col::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.25);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -125px;
+    }
+
+    .stats__col:last-child::after {
+        display: none;
+    }
+
+    .stats__col:nth-child(n) {
+        border: none;
+    }
+
+    .skills-bottom__line {
+        height: 7.2rem;
+    }
+
+    .stats__col:last-child .stats__count {
+        animation: typing 3500ms steps(13, end) infinite,
+        blink-caret 0.47s step-end infinite;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .skills-desc {
+        font-size: 1.8rem;
+    }
+
+    .stats__count {
+        font-size: 7.8rem;
+    }
+}
 
 
 /* ===================================================================
